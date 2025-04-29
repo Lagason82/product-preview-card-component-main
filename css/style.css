@@ -1,0 +1,163 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/	
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--body-background-color);
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  :root {
+    /* button-background-color */
+    --btn-background-clr: hsl(158, 36%, 37%);
+    --btn-background-clr-hover: hsl(158, 42%, 18%);
+    /* header-text-color */
+    --header-text-clr: hsl(212, 21%, 14%);
+    /* content-text-color */
+    --content-text-color:hsl(228, 12%, 48%);
+    /* body-background-color */
+    --body-background-color:hsl(30, 38%, 92%);
+    /* Card-background-colorr */
+    --card-background-color:hsl(0, 0%, 100%);
+    /* button-text-color */
+    --button-text-color:hsl(0, 0%, 100%);
+    /* discount-text-color */
+    --discount-text-clr: hsl(158, 36%, 37%);
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--card-background-color);
+    max-width: 35.1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 1s ease;
+  }
+
+.category {
+    text-transform: uppercase;
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: var(--content-text-color);
+    letter-spacing: 2px;
+    font-size: 0.88rem;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    max-width: 17.53rem;
+    row-gap: 1.3rem;
+}
+
+.description {
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: var(--content-text-color);
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.perfume-image {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px ;
+}
+
+.product-name {
+    font-size: 2.0rem;
+    line-height: 1;
+    font-family: Fraunces, Arial, Helvetica, sans-serif;
+}
+
+.price {
+    display: flex;
+    align-items: center ;
+    column-gap: 1rem;
+}
+
+.add-to-cart{
+  display: flex;
+  justify-content: center;
+  background-color: var(--btn-background-clr);
+  padding: 15px 0;
+  border-radius: 8px;
+  color: var(--button-text-color);
+  font-family: Montserrat,Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  column-gap: 1rem;
+  transform: all .25s;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: var(--btn-background-clr-hover);
+}
+
+.cart-icon {
+  display: inline-block;
+}
+
+.discount-price {
+  font-size: 2.0rem;
+  font-family: Fraunces, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--discount-text-clr);
+}
+
+.normal-price {
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 0.88rem;
+    color: var(--content-text-color);
+    text-decoration: line-through;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
